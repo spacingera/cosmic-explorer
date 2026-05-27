@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars"></div>
+<div class="twinkling"></div>
+    <header>
+        <nav>
+            <h1>🚀 Cosmic Explorer</h1>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Planets</a></li>
+                <li><a href="#">Missions</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <h2>Explore The Universe</h2>
+
+        <p>
+            Discover planets, galaxies, black holes,
+            and amazing space missions.
+        </p>
+
+        <button>Start Exploring</button>
+        
+
+    </section>
+    <!-- PLANETS SECTION -->
+
+<section class="planets">
+
+    <h2 class="section-title">Explore Planets</h2>
+
+    <div class="planet-container">
+
+        <div class="planet-card">
+            <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4" alt="Earth">
+            <h3>Earth</h3>
+            <p>
+                The only known planet supporting life in the universe.
+            </p>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://images.unsplash.com/photo-1630694093867-4b947d812bf0" alt="Mars">
+            <h3>Mars</h3>
+            <p>
+                Known as the Red Planet and future home for humans.
+            </p>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Jupiter">
+            <h3>Jupiter</h3>
+            <p>
+                The largest planet in our solar system with giant storms.
+            </p>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturn">
+            <h3>Saturn</h3>
+            <p>
+                Famous for its beautiful glowing rings made of ice and rock.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- SPACE FACTS SECTION -->
+
+<section class="facts">
+
+    <h2 class="section-title">Amazing Space Facts</h2>
+
+    <div class="facts-container">
+
+        <div class="fact-card">
+            <h3>🌌 Milky Way</h3>
+            <p>
+                Our galaxy contains more than 100 billion stars.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>🪐 Saturn</h3>
+            <p>
+                Saturn could float in water because it is mostly made of gas.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>☀️ Sun</h3>
+            <p>
+                More than 1 million Earths can fit inside the Sun.
+            </p>
+        </div>
+
+        <div class="fact-card">
+            <h3>🌍 Earth</h3>
+            <p>
+                Earth is the only known planet that supports life.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- BLACK HOLE SECTION -->
+
+<section class="blackhole">
+
+    <div class="blackhole-content">
+
+        <div class="blackhole-text">
+
+            <h2>The Mystery of Black Holes</h2>
+
+            <p>
+                Black holes are regions in space where gravity is so powerful
+                that nothing — not even light — can escape.
+                They are formed when massive stars collapse at the end
+                of their life cycle.
+            </p>
+
+            <button>Discover More</button>
+
+        </div>
+
+        <div class="blackhole-image">
+
+           <img src="images/blackhole.png" alt="Black Hole">
+
+        </div>
+
+    </div>
+
+</section>
+<!-- NASA API SECTION -->
+
+<section class="nasa-section">
+
+    <h2 class="section-title">
+        NASA Astronomy Picture
+    </h2>
+
+    <div class="nasa-container">
+
+        <img id="space-image" src="" alt="NASA Image">
+
+        <div class="nasa-content">
+
+            <h3 id="space-title"></h3>
+
+            <p id="space-description"></p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- SOLAR SYSTEM SECTION -->
+
+<section class="solar-system">
+
+    <h2 class="section-title">
+        The Solar System
+    </h2>
+
+    <div class="solar-container">
+
+        <!-- MERCURY -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg">
+            <h3>Mercury</h3>
+            <p>
+                The closest planet to the Sun and the smallest in the solar system.
+            </p>
+        </div>
+
+        <!-- VENUS -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg">
+            <h3>Venus</h3>
+            <p>
+                Venus is the hottest planet with thick toxic clouds.
+            </p>
+        </div>
+
+        <!-- EARTH -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg">
+            <h3>Earth</h3>
+            <p>
+                The only known planet supporting life.
+            </p>
+        </div>
+
+        <!-- MARS -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg">
+            <h3>Mars</h3>
+            <p>
+                Known as the Red Planet and target for future missions.
+            </p>
+        </div>
+
+        <!-- JUPITER -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg">
+            <h3>Jupiter</h3>
+            <p>
+                The largest planet with giant storms and many moons.
+            </p>
+        </div>
+
+        <!-- SATURN -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg">
+            <h3>Saturn</h3>
+            <p>
+                Famous for its beautiful rings made of ice and rock.
+            </p>
+        </div>
+
+        <!-- URANUS -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg">
+            <h3>Uranus</h3>
+            <p>
+                Uranus rotates sideways unlike most planets.
+            </p>
+        </div>
+
+        <!-- NEPTUNE -->
+
+        <div class="solar-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg">
+            <h3>Neptune</h3>
+            <p>
+                The farthest known planet with powerful winds.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ISS TRACKER SECTION -->
+
+<section class="iss-section">
+
+    <h2 class="section-title">
+        Live ISS Tracker
+    </h2>
+
+    <div class="iss-container">
+
+        <div class="iss-info">
+
+            <h3>International Space Station</h3>
+
+            <p id="iss-lat">
+                Latitude: Loading...
+            </p>
+
+            <p id="iss-long">
+                Longitude: Loading...
+            </p>
+
+        </div>
+
+        <iframe
+            id="iss-map"
+            src=""
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+<!-- ORBIT ANIMATION -->
+
+<section class="orbit-section">
+
+    <h2 class="section-title">
+        Planet Orbit Animation
+    </h2>
+
+   <div class="solar-system-animation">
+
+    <!-- SUN -->
+    <div class="sun"></div>
+
+    <!-- MERCURY -->
+    <div class="orbit mercury-orbit">
+        <div class="planet mercury"></div>
+    </div>
+
+    <!-- VENUS -->
+    <div class="orbit venus-orbit">
+        <div class="planet venus"></div>
+    </div>
+
+    <!-- EARTH -->
+    <div class="orbit earth-orbit">
+        <div class="planet earth"></div>
+    </div>
+
+    <!-- MARS -->
+    <div class="orbit mars-orbit">
+        <div class="planet mars"></div>
+    </div>
+
+    <!-- JUPITER -->
+    <div class="orbit jupiter-orbit">
+        <div class="planet jupiter"></div>
+    </div>
+
+    <!-- SATURN -->
+    <div class="orbit saturn-orbit">
+        <div class="planet saturn"></div>
+    </div>
+
+    <!-- URANUS -->
+    <div class="orbit uranus-orbit">
+        <div class="planet uranus"></div>
+    </div>
+
+    <!-- NEPTUNE -->
+    <div class="orbit neptune-orbit">
+        <div class="planet neptune"></div>
+    </div>
+
+</div>
+
+</section>
+<!-- SPACE QUIZ SECTION -->
+
+<section class="quiz-section">
+
+    <h2 class="section-title">
+        Space Quiz Challenge
+    </h2>
+
+    <div class="quiz-container">
+
+        <h3 id="question">
+            Question appears here
+        </h3>
+
+        <div class="quiz-buttons">
+
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+
+        </div>
+
+        <p id="quiz-result"></p>
+
+        <button id="next-btn">
+            Next Question
+        </button>
+
+    </div>
+
+</section>
+    <script src="script.js"></script>
+
+</body>
+</html>

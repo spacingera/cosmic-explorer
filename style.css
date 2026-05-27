@@ -1,0 +1,1073 @@
+/* SPACE BACKGROUND */
+
+.stars,
+.twinkling{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:block;
+    z-index:-2;
+}
+
+.stars{
+    background:black
+    url("https://www.transparenttextures.com/patterns/stardust.png")
+    repeat top center;
+}
+
+.twinkling{
+    background:
+    transparent
+    url("https://media.giphy.com/media/oYQ9HRm5Mo7VXeMNVR/giphy.gif")
+    repeat top center;
+
+    opacity:0.3;
+
+    animation:moveStars 200s linear infinite;
+}
+
+@keyframes moveStars{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-2000px);
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Orbitron', sans-serif;
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:50px 50px;
+    opacity:0.15;
+    z-index:-1;
+    animation:stars 50s linear infinite;
+}
+
+@keyframes stars{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-1000px);
+    }
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav h1{
+    color:cyan;
+    font-size:28px;
+    text-shadow:0 0 20px cyan;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:cyan;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:cyan;
+}
+
+/* Hero Section */
+
+.hero{
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564');
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* Heading */
+
+.hero h2{
+    font-size:90px;
+    margin-bottom:20px;
+
+    background:linear-gradient(cyan, white);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:0 0 20px rgba(0,255,255,0.5);
+
+    animation:fadeIn 2s ease;
+}
+
+/* Paragraph */
+
+.hero p{
+    font-size:22px;
+    width:60%;
+    line-height:1.8;
+    margin-bottom:40px;
+    color:#ddd;
+
+    animation:fadeIn 3s ease;
+}
+
+/* Button */
+
+button{
+    padding:18px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:linear-gradient(45deg, cyan, blue);
+
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+    box-shadow:0 0 20px rgba(0,255,255,0.5);
+
+    animation:fadeIn 4s ease;
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 0 40px cyan;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        padding:20px;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .hero h2{
+        font-size:50px;
+    }
+
+    .hero p{
+        width:90%;
+        font-size:18px;
+    }
+
+}
+/* PLANETS SECTION */
+
+.planets{
+    padding:100px 50px;
+    background:#050816;
+}
+
+.section-title{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+
+    color:cyan;
+
+    text-shadow:0 0 20px cyan;
+}
+
+.planet-container{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px,1fr));
+
+    gap:40px;
+}
+
+.planet-card{
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+
+    box-shadow:0 0 20px rgba(0,255,255,0.1);
+}
+
+.planet-card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    box-shadow:0 0 30px cyan;
+}
+
+.planet-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.planet-card h3{
+    font-size:28px;
+    margin:20px;
+    color:cyan;
+}
+
+.planet-card p{
+    margin:0 20px 30px;
+    line-height:1.7;
+    color:#ccc;
+}
+/* FACTS SECTION */
+
+.facts{
+    padding:100px 50px;
+    background:#02030a;
+}
+
+.facts-container{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.fact-card{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.1);
+}
+
+.fact-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 0 30px cyan;
+}
+
+.fact-card h3{
+    font-size:28px;
+    margin-bottom:20px;
+    color:cyan;
+}
+
+.fact-card p{
+    color:#ccc;
+    line-height:1.8;
+    font-size:16px;
+}
+/* BLACK HOLE SECTION */
+
+.blackhole{
+    padding:120px 50px;
+    background:#000;
+}
+
+.blackhole-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.blackhole-text{
+    flex:1;
+}
+
+.blackhole-text h2{
+    font-size:60px;
+    margin-bottom:30px;
+
+    color:cyan;
+
+    text-shadow:0 0 20px cyan;
+}
+
+.blackhole-text p{
+    font-size:18px;
+    line-height:2;
+    color:#ccc;
+    margin-bottom:30px;
+}
+
+.blackhole-image{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* BLACK HOLE */
+
+/* BLACK HOLE IMAGE */
+
+.blackhole-image img{
+
+    width:100%;
+    max-width:700px;
+
+    filter:
+    drop-shadow(0 0 40px cyan);
+
+    animation:
+    floatBlackHole 5s ease-in-out infinite;
+
+    transition:0.5s;
+}
+
+.blackhole-image img:hover{
+
+    transform:
+    scale(1.05);
+
+    filter:
+    drop-shadow(0 0 70px cyan);
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes floatBlackHole{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+/* NASA SECTION */
+
+.nasa-section{
+    padding:100px 50px;
+    background:#050816;
+}
+
+.nasa-container{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+#space-image{
+
+    width:100%;
+    max-width:600px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px cyan;
+
+    transition:0.5s;
+}
+
+#space-image:hover{
+    transform:scale(1.03);
+}
+
+.nasa-content{
+    flex:1;
+}
+
+#space-title{
+    font-size:40px;
+    margin-bottom:20px;
+    color:cyan;
+}
+
+#space-description{
+    color:#ccc;
+    line-height:2;
+    font-size:18px;
+}
+/* SOLAR SYSTEM */
+
+.solar-system{
+    padding:120px 50px;
+    background:#02030f;
+}
+
+.solar-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px,1fr));
+
+    gap:40px;
+}
+
+.solar-card{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.5s;
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.1);
+}
+
+.solar-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    box-shadow:
+    0 0 40px cyan;
+}
+
+.solar-card img{
+
+    width:100%;
+    height:260px;
+
+    object-fit:cover;
+}
+
+.solar-card h3{
+
+    font-size:30px;
+
+    margin:20px;
+
+    color:cyan;
+}
+
+.solar-card p{
+
+    margin:0 20px 30px;
+
+    color:#ccc;
+
+    line-height:1.8;
+}
+/* ISS TRACKER */
+
+.iss-section{
+    padding:120px 50px;
+    background:#050816;
+}
+
+.iss-container{
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+}
+
+.iss-info{
+
+    flex:1;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.1);
+}
+
+.iss-info h3{
+
+    color:cyan;
+
+    font-size:40px;
+
+    margin-bottom:30px;
+}
+
+.iss-info p{
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+    color:#ccc;
+}
+
+#iss-map{
+
+    flex:1;
+
+    width:100%;
+
+    min-height:450px;
+
+    border:none;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px cyan;
+}
+/* ORBIT ANIMATION SECTION */
+
+.orbit-section{
+
+    padding:120px 20px;
+
+    background:#000814;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* SOLAR SYSTEM */
+
+.solar-system-animation{
+
+    position:relative;
+
+    width:1200px;
+    height:1200px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* SUN */
+
+.sun{
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    #ffdd00,
+    orange,
+    red);
+
+    box-shadow:
+    0 0 60px orange,
+    0 0 120px red;
+}
+
+/* ORBITS */
+
+.orbit{
+
+    position:absolute;
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    animation:
+    rotateOrbit linear infinite;
+}
+
+/* PLANETS */
+
+.planet{
+
+    border-radius:50%;
+
+    margin-top:-10px;
+}
+
+/* MERCURY */
+
+.mercury-orbit{
+    width:180px;
+    height:180px;
+    animation-duration:5s;
+}
+
+.mercury{
+
+    width:18px;
+    height:18px;
+
+    background:gray;
+
+    box-shadow:
+    0 0 15px gray;
+}
+
+/* VENUS */
+
+.venus-orbit{
+    width:260px;
+    height:260px;
+    animation-duration:8s;
+}
+
+.venus{
+
+    width:25px;
+    height:25px;
+
+    background:#d4a373;
+
+    box-shadow:
+    0 0 15px #d4a373;
+}
+
+/* EARTH */
+
+.earth-orbit{
+    width:360px;
+    height:360px;
+    animation-duration:12s;
+}
+
+.earth{
+
+    width:28px;
+    height:28px;
+
+    background:
+    linear-gradient(blue, green);
+
+    box-shadow:
+    0 0 15px cyan;
+}
+
+/* MARS */
+
+.mars-orbit{
+    width:470px;
+    height:470px;
+    animation-duration:18s;
+}
+
+.mars{
+
+    width:22px;
+    height:22px;
+
+    background:#c1440e;
+
+    box-shadow:
+    0 0 15px #c1440e;
+}
+
+/* JUPITER */
+
+.jupiter-orbit{
+    width:600px;
+    height:600px;
+    animation-duration:25s;
+}
+
+.jupiter{
+
+    width:45px;
+    height:45px;
+
+    background:
+    linear-gradient(orange, #b5651d);
+
+    box-shadow:
+    0 0 20px orange;
+}
+
+/* SATURN */
+
+.saturn-orbit{
+    width:750px;
+    height:750px;
+    animation-duration:32s;
+}
+
+.saturn{
+
+    width:40px;
+    height:40px;
+
+    background:
+    linear-gradient(#d2b48c, #f4a460);
+
+    position:relative;
+
+    box-shadow:
+    0 0 20px #d2b48c;
+}
+
+/* SATURN RINGS */
+
+.saturn::after{
+
+    content:'';
+
+    position:absolute;
+
+    width:70px;
+    height:18px;
+
+    border:
+    3px solid rgba(255,255,255,0.7);
+
+    border-radius:50%;
+
+    top:10px;
+    left:-15px;
+}
+
+/* URANUS */
+
+.uranus-orbit{
+    width:900px;
+    height:900px;
+    animation-duration:40s;
+}
+
+.uranus{
+
+    width:35px;
+    height:35px;
+
+    background:lightblue;
+
+    box-shadow:
+    0 0 20px lightblue;
+}
+
+/* NEPTUNE */
+
+.neptune-orbit{
+    width:1050px;
+    height:1050px;
+    animation-duration:50s;
+}
+
+.neptune{
+
+    width:35px;
+    height:35px;
+
+    background:blue;
+
+    box-shadow:
+    0 0 20px blue;
+}
+
+/* ROTATION */
+
+@keyframes rotateOrbit{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .solar-system-animation{
+
+        width:500px;
+        height:500px;
+    }
+
+    .sun{
+        width:70px;
+        height:70px;
+    }
+
+    .mercury-orbit{
+        width:100px;
+        height:100px;
+    }
+
+    .venus-orbit{
+        width:150px;
+        height:150px;
+    }
+
+    .earth-orbit{
+        width:220px;
+        height:220px;
+    }
+
+    .mars-orbit{
+        width:300px;
+        height:300px;
+    }
+
+    .jupiter-orbit{
+        width:380px;
+        height:380px;
+    }
+
+    .saturn-orbit{
+        width:450px;
+        height:450px;
+    }
+
+    .uranus-orbit{
+        width:520px;
+        height:520px;
+    }
+
+    .neptune-orbit{
+        width:600px;
+        height:600px;
+    }
+}
+/* QUIZ SECTION */
+
+.quiz-section{
+
+    padding:120px 20px;
+
+    background:#02030f;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+}
+
+.quiz-container{
+
+    width:90%;
+    max-width:700px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+}
+
+#question{
+
+    font-size:30px;
+
+    margin-bottom:40px;
+
+    color:cyan;
+}
+
+.quiz-buttons{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.answer-btn{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.answer-btn:hover{
+
+    background:cyan;
+
+    color:black;
+
+    transform:scale(1.05);
+}
+
+#quiz-result{
+
+    margin-top:30px;
+
+    font-size:22px;
+
+    color:#00ffcc;
+}
+
+#next-btn{
+
+    margin-top:30px;
+}
