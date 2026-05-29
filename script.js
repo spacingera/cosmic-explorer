@@ -271,3 +271,113 @@ const planetData = {
     }
     
     });
+    // MISSION MODAL
+
+const missionData = {
+
+    Sputnik1:
+    `Launch: 1957
+    
+    The first artificial satellite launched by the Soviet Union.
+    
+    Achievements:
+    • Started the Space Age
+    • Orbited Earth successfully
+    • Triggered the space race`,
+    
+    Apollo11:
+    `Launch: 1969
+    
+    Crew:
+    Neil Armstrong
+    Buzz Aldrin
+    Michael Collins
+    
+    Achievements:
+    • First Moon landing
+    • First human steps on the Moon
+    • Returned safely to Earth`,
+    
+    Voyager1:
+    `Launch: 1977
+    
+    Achievements:
+    • Explored Jupiter and Saturn
+    • First spacecraft in interstellar space
+    • Still transmitting data today`,
+    
+    ISS:
+    `Started: 1998
+    
+    Achievements:
+    • Largest human-made object in orbit
+    • International collaboration
+    • Continuous human presence in space`,
+    
+    Chandrayaan3:
+    `Launch: 2023
+    
+    Achievements:
+    • Successful Moon south pole landing
+    • Made India the 4th nation to soft-land on the Moon
+    • Historic ISRO achievement`,
+    
+    Artemis:
+    `Current NASA Moon Program
+    
+    Goals:
+    • Return humans to the Moon
+    • First woman on the Moon
+    • Prepare future Mars missions`
+    };
+    
+    const missionModal =
+    document.getElementById("missionModal");
+    
+    const missionTitle =
+    document.getElementById("missionTitle");
+    
+    const missionInfo =
+    document.getElementById("missionInfo");
+    
+    const missionClose =
+    document.querySelector(".mission-close-btn");
+    
+    document.querySelectorAll(".timeline-content")
+    .forEach(card => {
+    
+    card.addEventListener("click", () => {
+    
+    const mission =
+    card.dataset.mission;
+    
+    missionTitle.innerText =
+    mission;
+    
+    missionInfo.innerText =
+    missionData[mission];
+    
+    missionModal.style.display =
+    "flex";
+    
+    });
+    
+    });
+    
+    missionClose.addEventListener("click", () => {
+    
+    missionModal.style.display =
+    "none";
+    
+    });
+    
+    window.addEventListener("click", (e) => {
+    
+    if(e.target === missionModal){
+    
+    missionModal.style.display =
+    "none";
+    
+    }
+    
+    });
