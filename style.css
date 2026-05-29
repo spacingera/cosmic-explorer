@@ -1143,3 +1143,120 @@ button:hover{
 
     color:white;
 }
+/* SPACE MISSIONS TIMELINE */
+
+.timeline-section{
+
+    padding:120px 20px;
+
+    background:#050816;
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.timeline::after{
+
+    content:'';
+
+    position:absolute;
+
+    width:4px;
+
+    background:cyan;
+
+    top:0;
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    box-shadow:0 0 20px cyan;
+}
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:20px 40px;
+}
+
+.timeline-item:nth-child(odd){
+
+    left:0;
+}
+
+.timeline-item:nth-child(even){
+
+    left:50%;
+}
+
+.timeline-content{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.1);
+
+    transition:0.4s;
+}
+
+.timeline-content:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 30px cyan;
+}
+
+.timeline-content h3{
+
+    color:cyan;
+
+    margin-bottom:10px;
+}
+
+.timeline-content p{
+
+    color:#ccc;
+
+    line-height:1.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .timeline::after{
+
+        left:20px;
+    }
+
+    .timeline-item{
+
+        width:100%;
+
+        left:0 !important;
+
+        padding-left:60px;
+    }
+}
